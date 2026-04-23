@@ -15,7 +15,9 @@ export default {
   template: /* html */ `
     <button @click="addChat">Add a chat</button>
     <ul>
-        <li v-for="chatId in chats" :key="chatId">Chat #{{ chatId }}</li>
+        <li v-for="chatId in chats" :key="chatId">
+            Chat #{{ chatId }}
+        </li>
     </ul>
   `,
   setup,
