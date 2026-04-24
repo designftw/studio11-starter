@@ -9,14 +9,14 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     // Add your routes here
+    { path: "/", component: loadComponent("home") },
+    { path: "/profile", component: loadComponent("profile") },
+    { path: "/chat/:chatId", component: loadComponent("chat"), props: true },
   ],
 });
 
 createApp({
   template: "#template",
-  components: {
-    Home: defineAsyncComponent(loadComponent("home")),
-  },
 })
   .use(router)
   .mount("#app");

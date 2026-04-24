@@ -19,11 +19,15 @@
         <div id="app">Loading...</div>
         <template id="template">
             <header>
-                <h1>My Single Page Chat App</h1>
+                <router-link to="/">
+                    <h1>My Single Page Chat App</h1>
+                </router-link>
+
+                <router-link to="/profile"> Profile </router-link>
             </header>
 
             <main>
-                <home></home>
+                <router-view></router-view>
             </main>
         </template>
     </body>
