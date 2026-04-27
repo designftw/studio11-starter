@@ -8,7 +8,11 @@ function loadComponent(name) {
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    // Add your routes here
+      {
+	  path: "/", component: loadComponent("home")
+      },
+      { path: "/chat/:chatId", component: loadComponent("chat"), props: true }
+      // Add your routes here
   ],
 });
 
